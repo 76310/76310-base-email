@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace \sat\BaseEmail\Api;
+namespace sat\BaseEmail\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use \sat\BaseEmail\ApiException;
-use \sat\BaseEmail\Configuration;
-use \sat\BaseEmail\HeaderSelector;
-use \sat\BaseEmail\ObjectSerializer;
+use sat\BaseEmail\ApiException;
+use sat\BaseEmail\Configuration;
+use sat\BaseEmail\HeaderSelector;
+use sat\BaseEmail\ObjectSerializer;
 
 /**
  * DomainesApi Class Doc Comment
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,9 +91,9 @@ class DomainesApi
      * Operation listerDomaines
      *
      *
-     * @throws \\sat\BaseEmail\ApiException on non-2xx response
+     * @throws \sat\BaseEmail\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \\sat\BaseEmail\Model\Domaine[]
+     * @return \sat\BaseEmail\Model\Domaine[]
      */
     public function listerDomaines()
     {
@@ -105,13 +105,13 @@ class DomainesApi
      * Operation listerDomainesWithHttpInfo
      *
      *
-     * @throws \\sat\BaseEmail\ApiException on non-2xx response
+     * @throws \sat\BaseEmail\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \\sat\BaseEmail\Model\Domaine[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \sat\BaseEmail\Model\Domaine[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listerDomainesWithHttpInfo()
     {
-        $returnType = '\\sat\BaseEmail\Model\Domaine[]';
+        $returnType = '\sat\BaseEmail\Model\Domaine[]';
         $request = $this->listerDomainesRequest();
 
         try {
@@ -163,7 +163,7 @@ class DomainesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\\sat\BaseEmail\Model\Domaine[]',
+                        '\sat\BaseEmail\Model\Domaine[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -203,7 +203,7 @@ class DomainesApi
      */
     public function listerDomainesAsyncWithHttpInfo()
     {
-        $returnType = '\\sat\BaseEmail\Model\Domaine[]';
+        $returnType = '\sat\BaseEmail\Model\Domaine[]';
         $request = $this->listerDomainesRequest();
 
         return $this->client
@@ -336,9 +336,9 @@ class DomainesApi
      *
      * @param  string $nom nom (required)
      *
-     * @throws \\sat\BaseEmail\ApiException on non-2xx response
+     * @throws \sat\BaseEmail\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \\sat\BaseEmail\Model\Domaine
+     * @return \sat\BaseEmail\Model\Domaine
      */
     public function validerDomaine($nom)
     {
@@ -351,13 +351,13 @@ class DomainesApi
      *
      * @param  string $nom (required)
      *
-     * @throws \\sat\BaseEmail\ApiException on non-2xx response
+     * @throws \sat\BaseEmail\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \\sat\BaseEmail\Model\Domaine, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \sat\BaseEmail\Model\Domaine, HTTP status code, HTTP response headers (array of strings)
      */
     public function validerDomaineWithHttpInfo($nom)
     {
-        $returnType = '\\sat\BaseEmail\Model\Domaine';
+        $returnType = '\sat\BaseEmail\Model\Domaine';
         $request = $this->validerDomaineRequest($nom);
 
         try {
@@ -409,7 +409,7 @@ class DomainesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\\sat\BaseEmail\Model\Domaine',
+                        '\sat\BaseEmail\Model\Domaine',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -451,7 +451,7 @@ class DomainesApi
      */
     public function validerDomaineAsyncWithHttpInfo($nom)
     {
-        $returnType = '\\sat\BaseEmail\Model\Domaine';
+        $returnType = '\sat\BaseEmail\Model\Domaine';
         $request = $this->validerDomaineRequest($nom);
 
         return $this->client

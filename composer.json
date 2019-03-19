@@ -8,6 +8,6 @@
     "guzzlehttp/guzzle": "^6.2"
   },
   "autoload": {
-    "psr-4": { "\\sat\\BaseEmail\\" : "lib/" }
+    "psr-4": { "sat\\BaseEmail\\" : "lib/" }
   }
 }

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace \sat\BaseEmail;
+namespace sat\BaseEmail;
 
 use \Exception;
 
@@ -34,7 +34,7 @@ use \Exception;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

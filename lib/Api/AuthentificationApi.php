@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace \sat\BaseEmail\Api;
+namespace sat\BaseEmail\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use \sat\BaseEmail\ApiException;
-use \sat\BaseEmail\Configuration;
-use \sat\BaseEmail\HeaderSelector;
-use \sat\BaseEmail\ObjectSerializer;
+use sat\BaseEmail\ApiException;
+use sat\BaseEmail\Configuration;
+use sat\BaseEmail\HeaderSelector;
+use sat\BaseEmail\ObjectSerializer;
 
 /**
  * AuthentificationApi Class Doc Comment
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class AuthentificationApi
      *
      * Obtention d'un Bearer d'authentification
      *
-     * @param  \\sat\BaseEmail\Model\TokenRequest $request request (optional)
+     * @param  \sat\BaseEmail\Model\TokenRequest $request request (optional)
      *
-     * @throws \\sat\BaseEmail\ApiException on non-2xx response
+     * @throws \sat\BaseEmail\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \\sat\BaseEmail\Model\TokenResponse
+     * @return \sat\BaseEmail\Model\TokenResponse
      */
     public function token($request = null)
     {
@@ -109,15 +109,15 @@ class AuthentificationApi
      *
      * Obtention d'un Bearer d'authentification
      *
-     * @param  \\sat\BaseEmail\Model\TokenRequest $request (optional)
+     * @param  \sat\BaseEmail\Model\TokenRequest $request (optional)
      *
-     * @throws \\sat\BaseEmail\ApiException on non-2xx response
+     * @throws \sat\BaseEmail\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \\sat\BaseEmail\Model\TokenResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \sat\BaseEmail\Model\TokenResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function tokenWithHttpInfo($request = null)
     {
-        $returnType = '\\sat\BaseEmail\Model\TokenResponse';
+        $returnType = '\sat\BaseEmail\Model\TokenResponse';
         $request = $this->tokenRequest($request);
 
         try {
@@ -169,7 +169,7 @@ class AuthentificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\\sat\BaseEmail\Model\TokenResponse',
+                        '\sat\BaseEmail\Model\TokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class AuthentificationApi
      *
      * Obtention d'un Bearer d'authentification
      *
-     * @param  \\sat\BaseEmail\Model\TokenRequest $request (optional)
+     * @param  \sat\BaseEmail\Model\TokenRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class AuthentificationApi
      *
      * Obtention d'un Bearer d'authentification
      *
-     * @param  \\sat\BaseEmail\Model\TokenRequest $request (optional)
+     * @param  \sat\BaseEmail\Model\TokenRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function tokenAsyncWithHttpInfo($request = null)
     {
-        $returnType = '\\sat\BaseEmail\Model\TokenResponse';
+        $returnType = '\sat\BaseEmail\Model\TokenResponse';
         $request = $this->tokenRequest($request);
 
         return $this->client
@@ -254,7 +254,7 @@ class AuthentificationApi
     /**
      * Create request for operation 'token'
      *
-     * @param  \\sat\BaseEmail\Model\TokenRequest $request (optional)
+     * @param  \sat\BaseEmail\Model\TokenRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

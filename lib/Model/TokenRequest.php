@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace \sat\BaseEmail\Model;
+namespace sat\BaseEmail\Model;
 
 use \ArrayAccess;
-use \\sat\BaseEmail\ObjectSerializer;
+use \sat\BaseEmail\ObjectSerializer;
 
 /**
  * TokenRequest Class Doc Comment
  *
  * @category Class
- * @package  \sat\BaseEmail
+ * @package  sat\BaseEmail
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
