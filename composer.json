@@ -1,0 +1,13 @@
+{
+  "name": "76310/76310-base-email",
+  "require": {
+    "php": ">=5.5",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": { "\\76310\\BaseEmail\\" : "lib/" }
+  }
+}
