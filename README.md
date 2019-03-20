@@ -15,7 +15,7 @@ Pour une installation via [Composer](http://getcomposer.org/), ajouter les ligne
 ```
 {
   "require": {
-    "76310/76310-base-email": "^1.0.*"
+    "76310/76310-base-email": "^1.0"
   }
 }
 ```
@@ -34,26 +34,30 @@ Après installation et chargement des classes nécessaires
 ```php
 <?php
 
-// Récupérer et configurer une clé d'authentification
-$config = \sat\BaseEmail\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-$apiInstance = new \sat\BaseEmail\Api\AuthentificationApi();
-$request = new \sat\BaseEmail\Model\TokenRequest();
-$request->setUsername('votre login');
-$request->setPassword('votre password');
+// Initialiser la configuration
+$config = \sat\BaseEmail\Configuration::getDefaultConfiguration();
+$config->setApiKeyPrefix('Authorization', 'Bearer');
+$config->setHost('url preprod ou prod');
+
+// Récupérer un token d'identification et le passer à la configuration
+$apiInstance = new \sat\BaseEmail\Api\AuthentificationApi(
+    null, //utilisera le client HTTP par défaut (`GuzzleHttp\Client`), peut-être remplacé par une implémentation de `GuzzleHttp\ClientInterface`
+    $config); 
+$request = new \sat\BaseEmail\Model\TokenRequest(array('username' => 'votre login', 'password' => 'votre password'));
 try {
     $result = $apiInstance->token($request);
-    $config->setApiKey($result->getAccessToken());
-} catch (Exception $e) {
+    $config->setApiKey('Authorization', $result->getAccessToken());
+} catch (\Exception $e) {
     echo 'Erreur: ', $e->getMessage(), PHP_EOL;
 }
 
 //appeler la méthode désirée, exemple : lister les domaines
-$apiInstance = new \sat\BaseEmail\Api\DomainesApi();
+$apiInstance = new \sat\BaseEmail\Api\DomainesApi(null, $config);
 try
 {
     $result = $apiInstance->listerDomaines();
     print_r($result);
-} catch (Exception $e) {
+} catch (\Exception $e) {
      echo 'Erreur: ', $e->getMessage(), PHP_EOL;
  }
 ?>
